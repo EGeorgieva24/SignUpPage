@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +81,31 @@ namespace SignUpPage
         {
             txtEmail.Text = "";
 
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Update(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(SqlConnection);
+                SqlConnection.Open();
+                string query = $"UPDATE Users SET FirstName = '{txtFirstName.Text}'.LastName = '{txtLastName.Text}', Email = 'yxy.Email.text}', Password = 'pswdBox.Password}' WHERE Username = 'txtUsername.Text}'";
+                SqlCommand cmd = new SqlCommand(qury, conn);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Success it words fine!");
+                    }
+            
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

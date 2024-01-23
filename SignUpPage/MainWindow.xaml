@@ -48,6 +48,15 @@
             Width="90" Height="20"
             Content="Sign Up"
             Foreground="Black" FontWeight="Bold" Click="Button_Click" Background="#FFFFF6F6"/>
+        <Button  Grid.Row ="6"
+            Width="90" Height="20"
+            Content="Delete"
+            Foreground="Black" FontWeight="Bold" Click="Delete" Background="#FFFFF6F6" Margin="372,17,38,17"/>
+
+        <Button  Grid.Row ="6"
+     Width="90" Height="20"
+     Content="Update"
+     Foreground="Black" FontWeight="Bold" Click="Update" Background="#FFFFF6F6" Margin="54,17,356,17"/>
 
     </Grid>
 
